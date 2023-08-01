@@ -88,21 +88,6 @@ PIN_Config pinTable[] = {
     Board_PIN_LED2 | PIN_GPIO_OUTPUT_EN | PIN_GPIO_LOW | PIN_PUSHPULL | PIN_DRVSTR_MAX,
     PIN_TERMINATE};
 
-/**
- * Sends the current vibration to the other board in the car such that it can be displayed on the screen
- *
- */
-static void sendDiagnostics(uint32_t currentVibration)
-{
-    struct RDPacket packet = {0};
-    packet.type = 0xDA;
-    packet.destinatonAddress = RD_BROADCAST_ADDRESS;
-    packet.data[0] = currentVibration >> 24;
-    packet.data[1] = currentVibration >> 16;
-    packet.data[2] = currentVibration >> 8;
-    packet.data[3] = currentVibration;
-    RDsendPacket(&packet);
-}
 
 static void mainFnx(UArg arg0, UArg arg1)
 {
@@ -115,7 +100,6 @@ static void mainFnx(UArg arg0, UArg arg1)
         data.latitude = 0x00000001;
         data.longitude = 0x00000001;
         data.vibration = VHgetVibration();
-        sendDiagnostics(data.vibration);
         C2XputData(data);
         Task_sleep((2000 * MS_TO_US) / Clock_tickPeriod);
     }

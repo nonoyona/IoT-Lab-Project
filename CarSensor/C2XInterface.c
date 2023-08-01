@@ -24,6 +24,22 @@ static uint16_t dataBufferIndex = 0;
 bool hasConnection = false;
 uint8_t infrastrucutreAddress;
 
+/**
+ * Sends the current vibration to the other board in the car such that it can be displayed on the screen
+ *
+ */
+static void sendDiagnostics(struct C2XData data)
+{
+    struct RDPacket packet = {0};
+    packet.type = 0xDA;
+    packet.destinatonAddress = RD_BROADCAST_ADDRESS;
+    serializeData(&data, packet.data);
+    packet.data[12] = (uint8_t)hasConnection;
+    packet.data[13] = dataBufferIndex >> 8;
+    packet.data[14] = dataBufferIndex;
+    RDsendPacket(&packet);
+}
+
 void serializeData(struct C2XData *data, uint8_t *payload)
 {
     payload[0] = data->latitude >> 24;
@@ -146,5 +162,6 @@ void C2XputData(struct C2XData data)
         dataBuffer[dataBufferIndex] = data;
         dataBufferIndex++;
     }
+    sendDiagnostics(data);
     Semaphore_post(bufferSemaphore);
 }
