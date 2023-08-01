@@ -1,0 +1,53 @@
+
+**** Build of configuration Debug for project rfEasyLinkRx_CC1350STK_tirtos_ccs ****
+
+"C:\\ti\\ccs1200\\ccs\\utils\\bin\\gmake" -k -j 6 all -O 
+ 
+Building file: "../ccfg.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/bin/armcl" -mv7M3 --code_state=16 --float_support=vfplib -me --include_path="D:/Documents/Git/IoT-Lab-Project/rfEasyLinkRx_CC1350STK_tirtos_ccs" --include_path="C:/ti/simplelink_cc13x0_sdk_4_20_02_07/source/ti/posix/ccs" --include_path="C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/include" --define=DeviceFamily_CC13X0 --define=CCFG_FORCE_VDDR_HH=0 --define=SUPPORT_PHY_CUSTOM --define=SUPPORT_PHY_50KBPS2GFSK --define=SUPPORT_PHY_625BPSLRM --define=SUPPORT_PHY_5KBPSSLLR -g --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --preproc_with_compile --preproc_dependency="ccfg.d_raw" --cmd_file="D:/Documents/Git/IoT-Lab-Project/tirtos_builds_CC1350STK_release_ccs/Debug/configPkg/compiler.opt"  "../ccfg.c"
+Finished building: "../ccfg.c"
+ 
+Building file: "../CC1350STK_fxns.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/bin/armcl" -mv7M3 --code_state=16 --float_support=vfplib -me --include_path="D:/Documents/Git/IoT-Lab-Project/rfEasyLinkRx_CC1350STK_tirtos_ccs" --include_path="C:/ti/simplelink_cc13x0_sdk_4_20_02_07/source/ti/posix/ccs" --include_path="C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/include" --define=DeviceFamily_CC13X0 --define=CCFG_FORCE_VDDR_HH=0 --define=SUPPORT_PHY_CUSTOM --define=SUPPORT_PHY_50KBPS2GFSK --define=SUPPORT_PHY_625BPSLRM --define=SUPPORT_PHY_5KBPSSLLR -g --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --preproc_with_compile --preproc_dependency="CC1350STK_fxns.d_raw" --cmd_file="D:/Documents/Git/IoT-Lab-Project/tirtos_builds_CC1350STK_release_ccs/Debug/configPkg/compiler.opt"  "../CC1350STK_fxns.c"
+Finished building: "../CC1350STK_fxns.c"
+ 
+Building file: "../easylink/easylink_config.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/bin/armcl" -mv7M3 --code_state=16 --float_support=vfplib -me --include_path="D:/Documents/Git/IoT-Lab-Project/rfEasyLinkRx_CC1350STK_tirtos_ccs" --include_path="C:/ti/simplelink_cc13x0_sdk_4_20_02_07/source/ti/posix/ccs" --include_path="C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/include" --define=DeviceFamily_CC13X0 --define=CCFG_FORCE_VDDR_HH=0 --define=SUPPORT_PHY_CUSTOM --define=SUPPORT_PHY_50KBPS2GFSK --define=SUPPORT_PHY_625BPSLRM --define=SUPPORT_PHY_5KBPSSLLR -g --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --preproc_with_compile --preproc_dependency="easylink/easylink_config.d_raw" --obj_directory="easylink" --cmd_file="D:/Documents/Git/IoT-Lab-Project/tirtos_builds_CC1350STK_release_ccs/Debug/configPkg/compiler.opt"  "../easylink/easylink_config.c"
+Finished building: "../easylink/easylink_config.c"
+ 
+Building file: "../CC1350STK.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/bin/armcl" -mv7M3 --code_state=16 --float_support=vfplib -me --include_path="D:/Documents/Git/IoT-Lab-Project/rfEasyLinkRx_CC1350STK_tirtos_ccs" --include_path="C:/ti/simplelink_cc13x0_sdk_4_20_02_07/source/ti/posix/ccs" --include_path="C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/include" --define=DeviceFamily_CC13X0 --define=CCFG_FORCE_VDDR_HH=0 --define=SUPPORT_PHY_CUSTOM --define=SUPPORT_PHY_50KBPS2GFSK --define=SUPPORT_PHY_625BPSLRM --define=SUPPORT_PHY_5KBPSSLLR -g --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --preproc_with_compile --preproc_dependency="CC1350STK.d_raw" --cmd_file="D:/Documents/Git/IoT-Lab-Project/tirtos_builds_CC1350STK_release_ccs/Debug/configPkg/compiler.opt"  "../CC1350STK.c"
+Finished building: "../CC1350STK.c"
+ 
+Building file: "../rfEasyLinkRx.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/bin/armcl" -mv7M3 --code_state=16 --float_support=vfplib -me --include_path="D:/Documents/Git/IoT-Lab-Project/rfEasyLinkRx_CC1350STK_tirtos_ccs" --include_path="C:/ti/simplelink_cc13x0_sdk_4_20_02_07/source/ti/posix/ccs" --include_path="C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/include" --define=DeviceFamily_CC13X0 --define=CCFG_FORCE_VDDR_HH=0 --define=SUPPORT_PHY_CUSTOM --define=SUPPORT_PHY_50KBPS2GFSK --define=SUPPORT_PHY_625BPSLRM --define=SUPPORT_PHY_5KBPSSLLR -g --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --preproc_with_compile --preproc_dependency="rfEasyLinkRx.d_raw" --cmd_file="D:/Documents/Git/IoT-Lab-Project/tirtos_builds_CC1350STK_release_ccs/Debug/configPkg/compiler.opt"  "../rfEasyLinkRx.c"
+Finished building: "../rfEasyLinkRx.c"
+ 
+Building file: "../smartrf_settings/smartrf_settings.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/bin/armcl" -mv7M3 --code_state=16 --float_support=vfplib -me --include_path="D:/Documents/Git/IoT-Lab-Project/rfEasyLinkRx_CC1350STK_tirtos_ccs" --include_path="C:/ti/simplelink_cc13x0_sdk_4_20_02_07/source/ti/posix/ccs" --include_path="C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/include" --define=DeviceFamily_CC13X0 --define=CCFG_FORCE_VDDR_HH=0 --define=SUPPORT_PHY_CUSTOM --define=SUPPORT_PHY_50KBPS2GFSK --define=SUPPORT_PHY_625BPSLRM --define=SUPPORT_PHY_5KBPSSLLR -g --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --preproc_with_compile --preproc_dependency="smartrf_settings/smartrf_settings.d_raw" --obj_directory="smartrf_settings" --cmd_file="D:/Documents/Git/IoT-Lab-Project/tirtos_builds_CC1350STK_release_ccs/Debug/configPkg/compiler.opt"  "../smartrf_settings/smartrf_settings.c"
+Finished building: "../smartrf_settings/smartrf_settings.c"
+ 
+Building file: "../smartrf_settings/smartrf_settings_predefined.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/bin/armcl" -mv7M3 --code_state=16 --float_support=vfplib -me --include_path="D:/Documents/Git/IoT-Lab-Project/rfEasyLinkRx_CC1350STK_tirtos_ccs" --include_path="C:/ti/simplelink_cc13x0_sdk_4_20_02_07/source/ti/posix/ccs" --include_path="C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/include" --define=DeviceFamily_CC13X0 --define=CCFG_FORCE_VDDR_HH=0 --define=SUPPORT_PHY_CUSTOM --define=SUPPORT_PHY_50KBPS2GFSK --define=SUPPORT_PHY_625BPSLRM --define=SUPPORT_PHY_5KBPSSLLR -g --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --preproc_with_compile --preproc_dependency="smartrf_settings/smartrf_settings_predefined.d_raw" --obj_directory="smartrf_settings" --cmd_file="D:/Documents/Git/IoT-Lab-Project/tirtos_builds_CC1350STK_release_ccs/Debug/configPkg/compiler.opt"  "../smartrf_settings/smartrf_settings_predefined.c"
+Finished building: "../smartrf_settings/smartrf_settings_predefined.c"
+ 
+Building file: "../easylink/EasyLink.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/bin/armcl" -mv7M3 --code_state=16 --float_support=vfplib -me --include_path="D:/Documents/Git/IoT-Lab-Project/rfEasyLinkRx_CC1350STK_tirtos_ccs" --include_path="C:/ti/simplelink_cc13x0_sdk_4_20_02_07/source/ti/posix/ccs" --include_path="C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/include" --define=DeviceFamily_CC13X0 --define=CCFG_FORCE_VDDR_HH=0 --define=SUPPORT_PHY_CUSTOM --define=SUPPORT_PHY_50KBPS2GFSK --define=SUPPORT_PHY_625BPSLRM --define=SUPPORT_PHY_5KBPSSLLR -g --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --preproc_with_compile --preproc_dependency="easylink/EasyLink.d_raw" --obj_directory="easylink" --cmd_file="D:/Documents/Git/IoT-Lab-Project/tirtos_builds_CC1350STK_release_ccs/Debug/configPkg/compiler.opt"  "../easylink/EasyLink.c"
+Finished building: "../easylink/EasyLink.c"
+ 
+Building target: "rfEasyLinkRx_CC1350STK_tirtos_ccs.out"
+Invoking: Arm Linker
+"C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/bin/armcl" -mv7M3 --code_state=16 --float_support=vfplib -me --define=DeviceFamily_CC13X0 --define=CCFG_FORCE_VDDR_HH=0 --define=SUPPORT_PHY_CUSTOM --define=SUPPORT_PHY_50KBPS2GFSK --define=SUPPORT_PHY_625BPSLRM --define=SUPPORT_PHY_5KBPSSLLR -g --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on -z -m"rfEasyLinkRx_CC1350STK_tirtos_ccs.map" -i"C:/ti/simplelink_cc13x0_sdk_4_20_02_07/source" -i"C:/ti/simplelink_cc13x0_sdk_4_20_02_07/kernel/tirtos/packages" -i"C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/lib" --diag_wrap=off --display_error_number --warn_sections --xml_link_info="rfEasyLinkRx_CC1350STK_tirtos_ccs_linkInfo.xml" --rom_model -o "rfEasyLinkRx_CC1350STK_tirtos_ccs.out" "./CC1350STK.obj" "./CC1350STK_fxns.obj" "./ccfg.obj" "./rfEasyLinkRx.obj" "./easylink/EasyLink.obj" "./easylink/easylink_config.obj" "./smartrf_settings/smartrf_settings.obj" "./smartrf_settings/smartrf_settings_predefined.obj" "../CC1350STK_TIRTOS.cmd" -l"ti/display/lib/display.aem3" -l"ti/grlib/lib/ccs/m3/grlib.a" -l"third_party/spiffs/lib/ccs/m3/spiffs_cc26xx.a" -l"ti/drivers/rf/lib/rf_multiMode_cc13x0.aem3" -l"ti/drivers/lib/drivers_cc13x0.aem3" -l"ti/dpl/lib/dpl_cc13x0.aem3" -l"D:/Documents/Git/IoT-Lab-Project/tirtos_builds_CC1350STK_release_ccs/Debug/configPkg/linker.cmd"  -l"ti/devices/cc13x0/driverlib/bin/ccs/driverlib.lib" -llibc.a 
+<Linking>
+Finished building target: "rfEasyLinkRx_CC1350STK_tirtos_ccs.out"
+ 
+
+**** Build Finished ****

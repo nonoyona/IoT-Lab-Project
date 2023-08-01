@@ -1,0 +1,37 @@
+#ifndef _RADIODRIVER_H_
+#define _RADIODRIVER_H_
+
+#include <stdint.h>
+#include "easylink/EasyLink.h"
+#include <ti/sysbios/knl/Semaphore.h>
+#include <ti/sysbios/BIOS.h>
+#include <xdc/runtime/Error.h>
+#include <xdc/runtime/System.h>
+
+#define RD_DATA_LENGTH 32
+
+struct RDPacket
+{
+    uint8_t type;
+    uint8_t requestAck;
+    uint8_t isAck;
+    uint8_t destinatonAddress;
+    uint8_t data[RD_DATA_LENGTH];
+};
+
+enum RDStatus
+{
+    RD_OK,
+    RD_ERROR,
+    RD_TIMEOUT
+};
+
+enum RDStatus RDsendPacketAck(struct RDPacket *packet, uint8_t maxRetries);
+
+enum RDStatus RDsendPacket(struct RDPacket *packet);
+
+void RDinitialize();
+
+enum RDStatus RDreceivePacket(struct RDPacket *packet);
+
+#endif

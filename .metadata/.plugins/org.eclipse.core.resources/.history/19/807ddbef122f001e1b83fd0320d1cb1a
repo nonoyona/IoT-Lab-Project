@@ -1,0 +1,145 @@
+#include "C2XInterface.h"
+#include <ti/sysbios/BIOS.h>
+#include <ti/sysbios/knl/Task.h>
+#include <ti/sysbios/knl/Clock.h>
+#include <ti/sysbios/knl/Semaphore.h>
+#include "RadioDriver.h"
+
+#define C2X_TASK_STACK_SIZE 1024
+#define C2X_TASK_PRIORITY 2
+#define MS_TO_US 1000
+#define C2X_DATA_BUFFER_SIZE 512
+
+#define C2X_PACKET_MISS_THRESHOLD 10
+
+static Semaphore_Handle bufferSemaphore;
+
+Task_Struct txTask;
+static Task_Params txTaskParams;
+static uint8_t txTaskStack[C2X_TASK_STACK_SIZE];
+
+static struct C2XData dataBuffer[C2X_DATA_BUFFER_SIZE];
+static uint16_t dataBufferIndex = 0;
+
+bool hasConnection = false;
+uint8_t infrastrucutreAddress;
+
+void serializeData(struct C2XData *data, uint8_t *payload)
+{
+    payload[0] = data->latitude >> 24;
+    payload[1] = data->latitude >> 16;
+    payload[2] = data->latitude >> 8;
+    payload[3] = data->latitude;
+    payload[4] = data->longitude >> 24;
+    payload[5] = data->longitude >> 16;
+    payload[6] = data->longitude >> 8;
+    payload[7] = data->longitude;
+    payload[8] = data->vibration >> 24;
+    payload[9] = data->vibration >> 16;
+    payload[10] = data->vibration >> 8;
+    payload[11] = data->vibration;
+}
+
+void sendConnectionRequest()
+{
+    struct RDPacket packet = {0};
+    packet.type = 0xC0;
+    packet.destinatonAddress = 0xFF;
+    RDsendPacket(&packet);
+}
+
+void tryReceiveAccept()
+{
+    struct RDPacket packet;
+    enum RDStatus status = RDreceivePacket(&packet);
+    if (status == RD_OK)
+    {
+        if (packet.type == 0xAC)
+        {
+            hasConnection = true;
+            infrastrucutreAddress = packet.sourceAddress;
+        }
+    }
+}
+
+static void taskC2XFnx(UArg arg0, UArg arg1)
+{
+    while (1)
+    {
+        if (!hasConnection)
+        {
+            if (dataBufferIndex > 0)
+            {
+                // If there is no connection, try to connect every millisecond
+                Task_sleep((1 * MS_TO_US) / Clock_tickPeriod);
+                sendConnectionRequest();
+                tryReceiveAccept();
+            }else{
+                Task_sleep((100 * MS_TO_US) / Clock_tickPeriod);
+            }
+        }
+        else
+        {
+            Semaphore_pend(bufferSemaphore, BIOS_WAIT_FOREVER);
+            if (dataBufferIndex > 0)
+            {
+                struct RDPacket packet = {0};
+                packet.type = 0xDA;
+                packet.destinatonAddress = infrastrucutreAddress;
+                serializeData(&dataBuffer[0], packet.data);
+                enum RDStatus status = RDsendPacketAck(&packet, 5);
+                if (status == RD_OK)
+                {
+                    dataBufferIndex--;
+                    uint16_t j;
+                    for (j = 0; j < dataBufferIndex; j++)
+                    {
+                        dataBuffer[j] = dataBuffer[j + 1];
+                    }
+                }
+                else
+                {
+                    hasConnection = false;
+                }
+            }
+            else
+            {
+                hasConnection = false;
+            }
+            Semaphore_post(bufferSemaphore);
+        }
+    }
+}
+
+void C2Xinit(void)
+{
+    Task_Params_init(&txTaskParams);
+    txTaskParams.stackSize = C2X_TASK_STACK_SIZE;
+    txTaskParams.priority = C2X_TASK_PRIORITY;
+    txTaskParams.stack = &txTaskStack;
+    txTaskParams.arg0 = (UInt)1000000;
+
+    Semaphore_Params semaphore_params;
+    Semaphore_Params_init(&semaphore_params);
+    Error_Block eb;
+    Error_init(&eb);
+
+    bufferSemaphore = Semaphore_create(1, &semaphore_params, &eb);
+    if (bufferSemaphore == NULL)
+    {
+        System_abort("Semaphore creation failed");
+    }
+
+    Task_construct(&txTask, taskC2XFnx, &txTaskParams, NULL);
+}
+
+void C2XputData(struct C2XData data)
+{
+    Semaphore_pend(bufferSemaphore, BIOS_WAIT_FOREVER);
+    if (dataBufferIndex < C2X_DATA_BUFFER_SIZE)
+    {
+        dataBuffer[dataBufferIndex] = data;
+        dataBufferIndex++;
+    }
+    Semaphore_post(bufferSemaphore);
+}

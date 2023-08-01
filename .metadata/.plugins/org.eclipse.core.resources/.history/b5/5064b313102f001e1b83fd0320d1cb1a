@@ -1,0 +1,85 @@
+#include "C2XInterface.h"
+#include <ti/sysbios/BIOS.h>
+#include <ti/sysbios/knl/Task.h>
+#include <ti/sysbios/knl/Clock.h>
+#include <ti/sysbios/knl/Semaphore.h>
+#include "RadioDriver.h"
+
+#define C2X_TASK_STACK_SIZE 1024
+#define C2X_TASK_PRIORITY 2
+#define MS_TO_US 1000
+#define C2X_DATA_BUFFER_SIZE 128
+
+#define C2X_PACKET_MISS_THRESHOLD 10
+
+static Semaphore_Handle bufferSemaphore;
+
+Task_Struct txTask;
+static Task_Params txTaskParams;
+static uint8_t txTaskStack[C2X_TASK_STACK_SIZE];
+
+static struct C2XData dataBuffer[C2X_DATA_BUFFER_SIZE];
+static uint16_t dataBufferIndex = 0;
+
+bool hasConnection = false;
+uint8_t infrastrucutreAddress;
+
+void sendConnectionRequest()
+{
+    struct RDPacket packet = {0};
+    packet.type = 0xC0;
+    packet.destinatonAddress = 0xFF;
+    RDsendPacket(&packet);
+}
+
+void tryReceiveAccept()
+{
+    struct RDPacket packet;
+    enum RDStatus status = RDreceivePacket(&packet);
+    if (status == RD_OK)
+    {
+        if (packet.type == 0xAC)
+        {
+            hasConnection = true;
+            infrastrucutreAddress = packet.sourceAddress;
+        }
+    }
+}
+
+static void taskC2XFnx(UArg arg0, UArg arg1)
+{
+    while (1)
+    {
+        if (!hasConnection)
+        {
+            // If there is no connection, try to connect every millisecond
+            Task_sleep((1 * MS_TO_US) / Clock_tickPeriod);
+            sendConnectionRequest();
+            tryReceiveAccept();
+        }else{
+            Semaphore_pend(bufferSemaphore, BIOS_WAIT_FOREVER);
+        }
+    }
+}
+
+void C2Xinit(void)
+{
+    Task_Params_init(&txTaskParams);
+    txTaskParams.stackSize = C2X_TASK_STACK_SIZE;
+    txTaskParams.priority = C2X_TASK_PRIORITY;
+    txTaskParams.stack = &txTaskStack;
+    txTaskParams.arg0 = (UInt)1000000;
+
+    Semaphore_Params semaphore_params;
+    Semaphore_Params_init(&semaphore_params);
+    Error_Block eb;
+    Error_init(&eb);
+
+    bufferSemaphore = Semaphore_create(1, &semaphore_params, &eb);
+    if (bufferSemaphore == NULL)
+    {
+        System_abort("Semaphore creation failed");
+    }
+
+    Task_construct(&txTask, taskC2XFnx, &txTaskParams, NULL);
+}

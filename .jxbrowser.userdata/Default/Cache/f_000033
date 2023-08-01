@@ -1,0 +1,414 @@
+[
+  {
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07",
+    "removeofflineLink": "api/resources?id=72714712089251776724481&path=Wireless connectivity/Embedded Software/SimpleLink CC13x0 SDK/Examples/Development Tools/CC1350 SensorTag/EasyLink/rfEasyLinkRx/TI-RTOS/CCS Compiler/rfEasyLinkRx&removeoffline=true",
+    "_id": "72714712089251776724481",
+    "advanced": {
+      "overrideProjectSpecDeviceId": true
+    },
+    "devtools": [
+      "CC1350 SensorTag"
+    ],
+    "fullPathsCoreTypeId": [
+      null
+    ],
+    "fullPathsCustomAliasPublicIds": [
+      [
+        "ALsmmWdqTZBEkoTw40ObzA"
+      ]
+    ],
+    "fullPathsDevId": [
+      "CC1350 SensorTag"
+    ],
+    "link": "api/linkTo/72714712089251776724481?extname=.json",
+    "linkType": "local",
+    "moduleGroups": [],
+    "modules": [],
+    "name": "overview.rov.json",
+    "packageUId": "com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07",
+    "parentID": "7272275543048676378094",
+    "resourceSubClass": [
+      "example.general"
+    ],
+    "resourceType": "file",
+    "type": "resource",
+    "text": "overview.rov.json",
+    "url": "/api/resources?path=Wireless%20connectivity/Embedded%20Software/SimpleLink%20CC13x0%20SDK/Examples/Development%20Tools/CC1350%20SensorTag/EasyLink/rfEasyLinkRx/TI-RTOS/CCS%20Compiler/rfEasyLinkRx&package=xdctools__3.51.03.28::com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07::sysconfig__1.13.0::arm.ti__18.12.5",
+    "packageOrder": 251
+  },
+  {
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07",
+    "removeofflineLink": "api/resources?id=7279129469721853707102&path=Wireless connectivity/Embedded Software/SimpleLink CC13x0 SDK/Examples/Development Tools/CC1350 SensorTag/EasyLink/rfEasyLinkRx/TI-RTOS/CCS Compiler/rfEasyLinkRx&removeoffline=true",
+    "_id": "7279129469721853707102",
+    "advanced": {
+      "overrideProjectSpecDeviceId": true
+    },
+    "devtools": [
+      "CC1350 SensorTag"
+    ],
+    "fullPathsCoreTypeId": [
+      null
+    ],
+    "fullPathsCustomAliasPublicIds": [
+      [
+        "ACZA1vlj9FelkAAFbw0WbQ"
+      ]
+    ],
+    "fullPathsDevId": [
+      "CC1350 SensorTag"
+    ],
+    "link": "api/linkTo/7279129469721853707102?extname=.md",
+    "linkType": "local",
+    "moduleGroups": [],
+    "modules": [],
+    "name": "README.md",
+    "packageUId": "com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07",
+    "parentID": "7272275543048676378094",
+    "resourceSubClass": [
+      "example.general"
+    ],
+    "resourceType": "file",
+    "type": "resource",
+    "text": "README.md",
+    "url": "/api/resources?path=Wireless%20connectivity/Embedded%20Software/SimpleLink%20CC13x0%20SDK/Examples/Development%20Tools/CC1350%20SensorTag/EasyLink/rfEasyLinkRx/TI-RTOS/CCS%20Compiler/rfEasyLinkRx&package=xdctools__3.51.03.28::com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07::sysconfig__1.13.0::arm.ti__18.12.5",
+    "packageOrder": 251
+  },
+  {
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07",
+    "removeofflineLink": "api/resources?id=72715934093543380007585&path=Wireless connectivity/Embedded Software/SimpleLink CC13x0 SDK/Examples/Development Tools/CC1350 SensorTag/EasyLink/rfEasyLinkRx/TI-RTOS/CCS Compiler/rfEasyLinkRx&removeoffline=true",
+    "_id": "72715934093543380007585",
+    "advanced": {
+      "overrideProjectSpecDeviceId": true
+    },
+    "devtools": [
+      "CC1350 SensorTag"
+    ],
+    "fullPathsCoreTypeId": [
+      null
+    ],
+    "fullPathsCustomAliasPublicIds": [
+      [
+        "AMKSYoMqtLe-nN1grAaiQw"
+      ]
+    ],
+    "fullPathsDevId": [
+      "CC1350 SensorTag"
+    ],
+    "link": "api/linkTo/72715934093543380007585?extname=.c",
+    "linkType": "local",
+    "moduleGroups": [],
+    "modules": [],
+    "name": "rfEasyLinkRx.c",
+    "packageUId": "com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07",
+    "parentID": "7272275543048676378094",
+    "resourceSubClass": [
+      "example.general"
+    ],
+    "resourceType": "file",
+    "type": "resource",
+    "text": "rfEasyLinkRx.c",
+    "url": "/api/resources?path=Wireless%20connectivity/Embedded%20Software/SimpleLink%20CC13x0%20SDK/Examples/Development%20Tools/CC1350%20SensorTag/EasyLink/rfEasyLinkRx/TI-RTOS/CCS%20Compiler/rfEasyLinkRx&package=xdctools__3.51.03.28::com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07::sysconfig__1.13.0::arm.ti__18.12.5",
+    "packageOrder": 251
+  },
+  {
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07",
+    "removeofflineLink": "api/resources?id=7271344535270772001029&path=Wireless connectivity/Embedded Software/SimpleLink CC13x0 SDK/Examples/Development Tools/CC1350 SensorTag/EasyLink/rfEasyLinkRx/TI-RTOS/CCS Compiler/rfEasyLinkRx&removeoffline=true",
+    "_id": "7271344535270772001029",
+    "advanced": {
+      "overrideProjectSpecDeviceId": true
+    },
+    "devtools": [
+      "CC1350 SensorTag"
+    ],
+    "fullPathsCoreTypeId": [
+      null
+    ],
+    "fullPathsCustomAliasPublicIds": [
+      [
+        "AKDROz5LkvPvKYtrY2h7lA"
+      ]
+    ],
+    "fullPathsDevId": [
+      "CC1350 SensorTag"
+    ],
+    "link": "api/linkTo/7271344535270772001029?extname=.h",
+    "linkType": "local",
+    "moduleGroups": [],
+    "modules": [],
+    "name": "Board.h",
+    "packageUId": "com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07",
+    "parentID": "7272275543048676378094",
+    "resourceSubClass": [
+      "example.general"
+    ],
+    "resourceType": "file",
+    "type": "resource",
+    "text": "Board.h",
+    "url": "/api/resources?path=Wireless%20connectivity/Embedded%20Software/SimpleLink%20CC13x0%20SDK/Examples/Development%20Tools/CC1350%20SensorTag/EasyLink/rfEasyLinkRx/TI-RTOS/CCS%20Compiler/rfEasyLinkRx&package=xdctools__3.51.03.28::com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07::sysconfig__1.13.0::arm.ti__18.12.5",
+    "packageOrder": 251
+  },
+  {
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07",
+    "removeofflineLink": "api/resources?id=7279238770655297776174&path=Wireless connectivity/Embedded Software/SimpleLink CC13x0 SDK/Examples/Development Tools/CC1350 SensorTag/EasyLink/rfEasyLinkRx/TI-RTOS/CCS Compiler/rfEasyLinkRx&removeoffline=true",
+    "_id": "7279238770655297776174",
+    "advanced": {
+      "overrideProjectSpecDeviceId": true
+    },
+    "devtools": [
+      "CC1350 SensorTag"
+    ],
+    "fullPathsCoreTypeId": [
+      null
+    ],
+    "fullPathsCustomAliasPublicIds": [
+      [
+        "AGJiqzVAYiv9Qc-dvdEsDA"
+      ]
+    ],
+    "fullPathsDevId": [
+      "CC1350 SensorTag"
+    ],
+    "link": "api/linkTo/7279238770655297776174?extname=.html",
+    "linkType": "local",
+    "moduleGroups": [],
+    "modules": [],
+    "name": "Board.html",
+    "packageUId": "com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07",
+    "parentID": "7272275543048676378094",
+    "resourceSubClass": [
+      "example.general"
+    ],
+    "resourceType": "file",
+    "type": "resource",
+    "text": "Board.html",
+    "url": "/api/resources?path=Wireless%20connectivity/Embedded%20Software/SimpleLink%20CC13x0%20SDK/Examples/Development%20Tools/CC1350%20SensorTag/EasyLink/rfEasyLinkRx/TI-RTOS/CCS%20Compiler/rfEasyLinkRx&package=xdctools__3.51.03.28::com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07::sysconfig__1.13.0::arm.ti__18.12.5",
+    "packageOrder": 251
+  },
+  {
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07",
+    "removeofflineLink": "api/resources?id=7271735188666994535655&path=Wireless connectivity/Embedded Software/SimpleLink CC13x0 SDK/Examples/Development Tools/CC1350 SensorTag/EasyLink/rfEasyLinkRx/TI-RTOS/CCS Compiler/rfEasyLinkRx&removeoffline=true",
+    "_id": "7271735188666994535655",
+    "advanced": {
+      "overrideProjectSpecDeviceId": true
+    },
+    "devtools": [
+      "CC1350 SensorTag"
+    ],
+    "fullPathsCoreTypeId": [
+      null
+    ],
+    "fullPathsCustomAliasPublicIds": [
+      [
+        "AAfua0lclnmMD9qjSecI6w"
+      ]
+    ],
+    "fullPathsDevId": [
+      "CC1350 SensorTag"
+    ],
+    "link": "api/linkTo/7271735188666994535655?extname=.c",
+    "linkType": "local",
+    "moduleGroups": [],
+    "modules": [],
+    "name": "CC1350STK.c",
+    "packageUId": "com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07",
+    "parentID": "7272275543048676378094",
+    "resourceSubClass": [
+      "example.general"
+    ],
+    "resourceType": "file",
+    "type": "resource",
+    "text": "CC1350STK.c",
+    "url": "/api/resources?path=Wireless%20connectivity/Embedded%20Software/SimpleLink%20CC13x0%20SDK/Examples/Development%20Tools/CC1350%20SensorTag/EasyLink/rfEasyLinkRx/TI-RTOS/CCS%20Compiler/rfEasyLinkRx&package=xdctools__3.51.03.28::com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07::sysconfig__1.13.0::arm.ti__18.12.5",
+    "packageOrder": 251
+  },
+  {
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07",
+    "removeofflineLink": "api/resources?id=72712277382441866286967&path=Wireless connectivity/Embedded Software/SimpleLink CC13x0 SDK/Examples/Development Tools/CC1350 SensorTag/EasyLink/rfEasyLinkRx/TI-RTOS/CCS Compiler/rfEasyLinkRx&removeoffline=true",
+    "_id": "72712277382441866286967",
+    "advanced": {
+      "overrideProjectSpecDeviceId": true
+    },
+    "devtools": [
+      "CC1350 SensorTag"
+    ],
+    "fullPathsCoreTypeId": [
+      null
+    ],
+    "fullPathsCustomAliasPublicIds": [
+      [
+        "ACcDqhcGRIhFqAoNqJJMKg"
+      ]
+    ],
+    "fullPathsDevId": [
+      "CC1350 SensorTag"
+    ],
+    "link": "api/linkTo/72712277382441866286967?extname=.h",
+    "linkType": "local",
+    "moduleGroups": [],
+    "modules": [],
+    "name": "CC1350STK.h",
+    "packageUId": "com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07",
+    "parentID": "7272275543048676378094",
+    "resourceSubClass": [
+      "example.general"
+    ],
+    "resourceType": "file",
+    "type": "resource",
+    "text": "CC1350STK.h",
+    "url": "/api/resources?path=Wireless%20connectivity/Embedded%20Software/SimpleLink%20CC13x0%20SDK/Examples/Development%20Tools/CC1350%20SensorTag/EasyLink/rfEasyLinkRx/TI-RTOS/CCS%20Compiler/rfEasyLinkRx&package=xdctools__3.51.03.28::com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07::sysconfig__1.13.0::arm.ti__18.12.5",
+    "packageOrder": 251
+  },
+  {
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07",
+    "removeofflineLink": "api/resources?id=7271999500063102418343&path=Wireless connectivity/Embedded Software/SimpleLink CC13x0 SDK/Examples/Development Tools/CC1350 SensorTag/EasyLink/rfEasyLinkRx/TI-RTOS/CCS Compiler/rfEasyLinkRx&removeoffline=true",
+    "_id": "7271999500063102418343",
+    "advanced": {
+      "overrideProjectSpecDeviceId": true
+    },
+    "devtools": [
+      "CC1350 SensorTag"
+    ],
+    "fullPathsCoreTypeId": [
+      null
+    ],
+    "fullPathsCustomAliasPublicIds": [
+      [
+        "ABygKwl4A06UgbTmVUX9vQ"
+      ]
+    ],
+    "fullPathsDevId": [
+      "CC1350 SensorTag"
+    ],
+    "link": "api/linkTo/7271999500063102418343?extname=.c",
+    "linkType": "local",
+    "moduleGroups": [],
+    "modules": [],
+    "name": "CC1350STK_fxns.c",
+    "packageUId": "com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07",
+    "parentID": "7272275543048676378094",
+    "resourceSubClass": [
+      "example.general"
+    ],
+    "resourceType": "file",
+    "type": "resource",
+    "text": "CC1350STK_fxns.c",
+    "url": "/api/resources?path=Wireless%20connectivity/Embedded%20Software/SimpleLink%20CC13x0%20SDK/Examples/Development%20Tools/CC1350%20SensorTag/EasyLink/rfEasyLinkRx/TI-RTOS/CCS%20Compiler/rfEasyLinkRx&package=xdctools__3.51.03.28::com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07::sysconfig__1.13.0::arm.ti__18.12.5",
+    "packageOrder": 251
+  },
+  {
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07",
+    "removeofflineLink": "api/resources?id=7274123650413595104448&path=Wireless connectivity/Embedded Software/SimpleLink CC13x0 SDK/Examples/Development Tools/CC1350 SensorTag/EasyLink/rfEasyLinkRx/TI-RTOS/CCS Compiler/rfEasyLinkRx&removeoffline=true",
+    "_id": "7274123650413595104448",
+    "advanced": {
+      "overrideProjectSpecDeviceId": true
+    },
+    "devtools": [
+      "CC1350 SensorTag"
+    ],
+    "fullPathsCoreTypeId": [
+      null
+    ],
+    "fullPathsCustomAliasPublicIds": [
+      [
+        "ABBGpaJzj9Yz8SPKEhTrhw"
+      ]
+    ],
+    "fullPathsDevId": [
+      "CC1350 SensorTag"
+    ],
+    "link": "api/linkTo/7274123650413595104448?extname=.cmd",
+    "linkType": "local",
+    "moduleGroups": [],
+    "modules": [],
+    "name": "CC1350STK_TIRTOS.cmd",
+    "packageUId": "com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07",
+    "parentID": "7272275543048676378094",
+    "resourceSubClass": [
+      "example.general"
+    ],
+    "resourceType": "file",
+    "type": "resource",
+    "text": "CC1350STK_TIRTOS.cmd",
+    "url": "/api/resources?path=Wireless%20connectivity/Embedded%20Software/SimpleLink%20CC13x0%20SDK/Examples/Development%20Tools/CC1350%20SensorTag/EasyLink/rfEasyLinkRx/TI-RTOS/CCS%20Compiler/rfEasyLinkRx&package=xdctools__3.51.03.28::com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07::sysconfig__1.13.0::arm.ti__18.12.5",
+    "packageOrder": 251
+  },
+  {
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07",
+    "removeofflineLink": "api/resources?id=72712031283627077796728&path=Wireless connectivity/Embedded Software/SimpleLink CC13x0 SDK/Examples/Development Tools/CC1350 SensorTag/EasyLink/rfEasyLinkRx/TI-RTOS/CCS Compiler/rfEasyLinkRx&removeoffline=true",
+    "_id": "72712031283627077796728",
+    "advanced": {
+      "overrideProjectSpecDeviceId": true
+    },
+    "devtools": [
+      "CC1350 SensorTag"
+    ],
+    "fullPathsCoreTypeId": [
+      null
+    ],
+    "fullPathsCustomAliasPublicIds": [
+      [
+        "AKFpjbERUvXhMHa8RNOnVw"
+      ]
+    ],
+    "fullPathsDevId": [
+      "CC1350 SensorTag"
+    ],
+    "link": "api/linkTo/72712031283627077796728?extname=.c",
+    "linkType": "local",
+    "moduleGroups": [],
+    "modules": [],
+    "name": "ccfg.c",
+    "packageUId": "com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07",
+    "parentID": "7272275543048676378094",
+    "resourceSubClass": [
+      "example.general"
+    ],
+    "resourceType": "file",
+    "type": "resource",
+    "text": "ccfg.c",
+    "url": "/api/resources?path=Wireless%20connectivity/Embedded%20Software/SimpleLink%20CC13x0%20SDK/Examples/Development%20Tools/CC1350%20SensorTag/EasyLink/rfEasyLinkRx/TI-RTOS/CCS%20Compiler/rfEasyLinkRx&package=xdctools__3.51.03.28::com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07::sysconfig__1.13.0::arm.ti__18.12.5",
+    "packageOrder": 251
+  },
+  {
+    "text": "easylink",
+    "type": "folder",
+    "numChildren": 0,
+    "numChildrenLocal": 4,
+    "children": true,
+    "state": {
+      "opened": false
+    },
+    "packageUId": "com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07",
+    "url": "/api/resources?path=Wireless%20connectivity/Embedded%20Software/SimpleLink%20CC13x0%20SDK/Examples/Development%20Tools/CC1350%20SensorTag/EasyLink/rfEasyLinkRx/TI-RTOS/CCS%20Compiler/rfEasyLinkRx&package=xdctools__3.51.03.28::com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07::sysconfig__1.13.0::arm.ti__18.12.5",
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07",
+    "removeofflineLink": "api/resources?package=arm.ti__18.12.5::com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07::sysconfig__1.13.0::xdctools__3.51.03.28&path=Wireless connectivity/Embedded Software/SimpleLink CC13x0 SDK/Examples/Development Tools/CC1350 SensorTag/EasyLink/rfEasyLinkRx/TI-RTOS/CCS Compiler/rfEasyLinkRx/easylink&removeoffline=true",
+    "packageOrder": 251
+  },
+  {
+    "text": "smartrf_settings",
+    "type": "folder",
+    "numChildren": 0,
+    "numChildrenLocal": 4,
+    "children": true,
+    "state": {
+      "opened": false
+    },
+    "packageUId": "com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07",
+    "url": "/api/resources?path=Wireless%20connectivity/Embedded%20Software/SimpleLink%20CC13x0%20SDK/Examples/Development%20Tools/CC1350%20SensorTag/EasyLink/rfEasyLinkRx/TI-RTOS/CCS%20Compiler/rfEasyLinkRx&package=xdctools__3.51.03.28::com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07::sysconfig__1.13.0::arm.ti__18.12.5",
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07",
+    "removeofflineLink": "api/resources?package=arm.ti__18.12.5::com.ti.SIMPLELINK_CC13X0_SDK__4.20.02.07::sysconfig__1.13.0::xdctools__3.51.03.28&path=Wireless connectivity/Embedded Software/SimpleLink CC13x0 SDK/Examples/Development Tools/CC1350 SensorTag/EasyLink/rfEasyLinkRx/TI-RTOS/CCS Compiler/rfEasyLinkRx/smartrf_settings&removeoffline=true",
+    "packageOrder": 251
+  }
+]
