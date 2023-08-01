@@ -8,6 +8,9 @@
 		},
 		{
 			"path": "PythonServerSerial"
+		},
+		{
+			"path": "CarDiagnostics"
 		}
 	]
 }
