@@ -2,3 +2,7 @@ Release/*
 .xdchelp
 config/*
 .launches/*
+.jxbrowser.userdata/*
+RemoteSystemsTempFiles/*
+dvt/*
+.metadata/*
