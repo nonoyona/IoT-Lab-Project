@@ -1,8 +1,0 @@
-
-**** Build of configuration Debug for project CarSensor ****
-
-"C:\\ti\\ccs1200\\ccs\\utils\\bin\\gmake" -k -j 6 all -O 
- 
-gmake[1]: 'CarSensor.out' is up to date.
-
-**** Build Finished ****
