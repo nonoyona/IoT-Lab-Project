@@ -1,4 +1,5 @@
-Release/*
+**/Release/*
+**/Debug/*
 .xdchelp
 config/*
 .launches/*
@@ -6,3 +7,6 @@ config/*
 RemoteSystemsTempFiles/*
 dvt/*
 .metadata/*
+/.metadata/
+**/.settings/*
+**/.vscode/*
