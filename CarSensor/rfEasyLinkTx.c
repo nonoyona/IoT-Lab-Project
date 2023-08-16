@@ -64,7 +64,7 @@
 #include "GPSInterface.h"
 #include "VibrationHandler.h"
 
-#define RFEASYLINKTX_TASK_STACK_SIZE 1024
+#define RFEASYLINKTX_TASK_STACK_SIZE 800
 #define RFEASYLINKTX_TASK_PRIORITY 2
 
 #define RFEASYLINKTX_BURST_SIZE 10

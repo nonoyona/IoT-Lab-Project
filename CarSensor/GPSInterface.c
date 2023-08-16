@@ -11,8 +11,8 @@
 UART_Handle uart;
 
 
-#define GPS_TASK_STACK_SIZE 512
-#define GPS_TASK_PRIORITY 2
+#define GPS_TASK_STACK_SIZE 400
+#define GPS_TASK_PRIORITY 1
 
 Task_Struct gpsTask;
 static Task_Params gpsTaskParams;
@@ -65,6 +65,7 @@ void taskGPSfnx(UArg a0, UArg a1)
             }
             Semaphore_post(valueSemaphore);
         }
+    Task_yield();
     }
 }
 

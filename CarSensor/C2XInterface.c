@@ -5,7 +5,7 @@
 #include <ti/sysbios/knl/Semaphore.h>
 #include "RadioDriver.h"
 
-#define C2X_TASK_STACK_SIZE 1024
+#define C2X_TASK_STACK_SIZE 400
 #define C2X_TASK_PRIORITY 2
 #define MS_TO_US 1000
 #define C2X_DATA_BUFFER_SIZE 512
