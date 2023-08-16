@@ -35,7 +35,7 @@ void taskGPSfnx(UArg a0, UArg a1)
     while (1)
     {
         char prefix[] = "$GPRMC";
-        UART_read(uart, &input, 1);
+        UART_read(uart, &buffer, 1);
         if(strncmp(buffer, prefix, sizeof(prefix)) == 0){
             char *token = strtok(buffer, ",");
             int i = 0;
@@ -98,10 +98,10 @@ void GPSInit(void)
 
 }
 
-void GPSRead(uint32_t *lat, uint32_t *long)
+void GPSRead(uint32_t *lat, uint32_t *lon)
 {
     Semaphore_pend(valueSemaphore, BIOS_WAIT_FOREVER);
     *lat = latitude;
-    *long = longitude;
+    *lon = longitude;
     Semaphore_post(valueSemaphore);
 }
