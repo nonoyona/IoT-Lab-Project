@@ -2,6 +2,8 @@
 #define _DIAGNOSTICS_H_
 
 #include <stdint.h>
+#include <stdbool.h>
+
 
 struct DiagnosticsData
 {

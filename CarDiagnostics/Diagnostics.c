@@ -17,7 +17,7 @@ enum DiagnosticsStatus DiagnosticsReceiveData(struct DiagnosticsData *data)
 {
     struct RDPacket packet;
     enum RDStatus status = RDreceivePacket(&packet);
-    if (status != RD_STATUS_OK || packet.type != DIAGNOSTICS_PACKET_TYPE)
+    if (status != RD_OK || packet.type != DIAGNOSTICS_PACKET_TYPE)
     {
         return DIAGNOSTICS_STATUS_ERROR;
     }

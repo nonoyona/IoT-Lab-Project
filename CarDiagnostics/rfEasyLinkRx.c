@@ -154,7 +154,6 @@ int main(void)
     PIN_setOutputValue(ledPinHandle, Board_PIN_LED2, 0);
 
     rxTask_init(ledPinHandle);
-    C2Xinit();
 
     /* Start BIOS */
     BIOS_start();
