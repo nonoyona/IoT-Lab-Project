@@ -61,6 +61,7 @@
 #include "smartrf_settings/smartrf_settings.h"
 #include "RadioDriver.h"
 #include "C2XInterface.h"
+#include "GPSInterface.h"
 #include "VibrationHandler.h"
 
 #define RFEASYLINKTX_TASK_STACK_SIZE 1024
@@ -95,10 +96,7 @@ static void mainFnx(UArg arg0, UArg arg1)
     struct C2XData data = {0};
     while (1)
     {
-
-        // Hier sollten irgendwie noch die GPS Koordinaten mit einfließen
-        data.latitude = 0x00000001;
-        data.longitude = 0x00000001;
+        GPSRead(&data.latitude, &data.longitude);
         data.vibration = VHgetVibration();
         C2XputData(data);
         Task_sleep((2000 * MS_TO_US) / Clock_tickPeriod);
@@ -137,6 +135,7 @@ int main(void)
     txTask_init(pinHandle);
     C2Xinit();
     VHinit();
+    GPSInit();
 
     /* Start BIOS */
     BIOS_start();
