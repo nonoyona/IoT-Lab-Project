@@ -7,6 +7,7 @@
 #include <xdc/runtime/System.h>
 #include <ti/sysbios/BIOS.h>
 #include <xdc/runtime/Error.h>
+#include <stdbool.h>
 
 UART_Handle uart;
 
@@ -20,6 +21,7 @@ static uint8_t gpsTaskStack[GPS_TASK_STACK_SIZE];
 
 int32_t latitude;
 int32_t longitude;
+bool read = false;
 
 static Semaphore_Handle valueSemaphore;
 
@@ -27,16 +29,10 @@ double dmsToDecimal(int degrees, int minutes) {
     return degrees + (double)minutes / 6000;
 }
 
-void taskGPSfnx(UArg a0, UArg a1)
-{
-    uint8_t buffer[256];
-    int degrees = 0;
-    int minutes = 0;
-    while (1)
-    {
-        char prefix[] = "$GPRMC";
-        UART_read(uart, &buffer, 1);
-        if(strncmp(buffer, prefix, sizeof(prefix)) == 0){
+void uartCallback(UART_Handle handle, void *buf, size_t count){
+    char prefix[] = "$GPRMC";
+    read = true;
+    if(strncmp(buf, prefix, sizeof(prefix)) == 0){
             char *token = strtok(buffer, ",");
             int i = 0;
             Semaphore_pend(valueSemaphore, BIOS_WAIT_FOREVER);
@@ -65,6 +61,22 @@ void taskGPSfnx(UArg a0, UArg a1)
             }
             Semaphore_post(valueSemaphore);
         }
+}
+
+void taskGPSfnx(UArg a0, UArg a1)
+{
+    uint8_t buffer[256];
+    int degrees = 0;
+    int minutes = 0;
+    while (1)
+    {
+        read = false;
+        UART_read(uart, &buffer, 256);
+        Task_sleep(100);
+        if(!read){
+            UART_readCancel(uart);
+        }
+        
     }
 }
 
@@ -75,7 +87,8 @@ void GPSInit(void)
     uartParams.baudRate = 9600;
     uartParams.readDataMode = UART_DATA_BINARY;
     uartParams.readEcho = UART_ECHO_OFF;
-    uartParams.readReturnMode = UART_RETURN_FULL;
+    uartParams.readReturnMode = UART_RETURN_NEWLINE;
+    uartParams.readMode = UART_MODE_CALLBACK;
     uart = UART_open(Board_UART0, &uartParams);
 
     Task_Params_init(&gpsTaskParams);
