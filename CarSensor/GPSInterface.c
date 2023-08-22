@@ -31,9 +31,11 @@ double dmsToDecimal(int degrees, int minutes) {
 
 void uartCallback(UART_Handle handle, void *buf, size_t count){
     char prefix[] = "$GPRMC";
+    int degrees = 0;
+    int minutes = 0;
     read = true;
     if(strncmp(buf, prefix, sizeof(prefix)) == 0){
-            char *token = strtok(buffer, ",");
+            char *token = strtok(buf, ",");
             int i = 0;
             Semaphore_pend(valueSemaphore, BIOS_WAIT_FOREVER);
             while(token != NULL){
@@ -66,9 +68,16 @@ void uartCallback(UART_Handle handle, void *buf, size_t count){
 
 void taskGPSfnx(UArg a0, UArg a1)
 {
+    UART_Params uartParams;
+    UART_Params_init(&uartParams);
+    uartParams.baudRate = 9600;
+    uartParams.readDataMode = UART_DATA_BINARY;
+    uartParams.readEcho = UART_ECHO_OFF;
+    uartParams.readReturnMode = UART_RETURN_NEWLINE;
+    uartParams.readMode = UART_MODE_CALLBACK;
+    uartParams.readCallback = uartCallback;
+    uart = UART_open(Board_UART0, &uartParams);
     uint8_t buffer[256];
-    int degrees = 0;
-    int minutes = 0;
     while (1)
     {
         read = false;
@@ -82,14 +91,6 @@ void taskGPSfnx(UArg a0, UArg a1)
 
 void GPSInit(void)
 {
-    UART_Params uartParams;
-    UART_Params_init(&uartParams);
-    uartParams.baudRate = 9600;
-    uartParams.readDataMode = UART_DATA_BINARY;
-    uartParams.readEcho = UART_ECHO_OFF;
-    uartParams.readReturnMode = UART_RETURN_NEWLINE;
-    uartParams.readMode = UART_MODE_CALLBACK;
-    uart = UART_open(Board_UART0, &uartParams);
 
     Task_Params_init(&gpsTaskParams);
     gpsTaskParams.stackSize = GPS_TASK_STACK_SIZE;
