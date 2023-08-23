@@ -25,7 +25,7 @@ class Simulator {
       } else {
         // Wait for the time difference
         final difference = data.date.difference(lastDate);
-        await Future.delayed(difference);
+        await Future.delayed(difference * 0.3);
         // Yield the data
         yield data;
       }
@@ -43,12 +43,17 @@ class Simulator {
       // Parse the data
       for (var line in lines) {
         final data = line.split(',');
-        final date = DateTime.parse(data[0]);
-        final latitude = double.parse(data[1]);
-        final longitude = double.parse(data[2]);
-        final vibration = double.parse(data[3]);
+        final date = int.parse(data[0]);
+        final latitude = double.parse(data[2]);
+        final longitude = double.parse(data[3]);
+        final vibration = double.parse(data[1]);
         // Add the data to the list
-        _data.add(DataPoint(date, latitude, longitude, vibration));
+        _data.add(DataPoint(
+          DateTime.fromMillisecondsSinceEpoch(date * 1000),
+          latitude,
+          longitude,
+          vibration,
+        ));
       }
     });
   }
